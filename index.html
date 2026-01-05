@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Domino's Retail Sales Coach - AI-powered sales training for team members. Practice upselling, handling objections, and customer service scenarios.">
+  <meta name="keywords" content="Dominos, sales training, retail coaching, AI training, customer service, upselling">
+  <meta name="author" content="Domino's Pizza">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Domino's Retail Sales Coach">
+  <meta property="og:description" content="Master your sales skills with AI-powered scenario training">
+  <meta property="og:type" content="website">
+  
+  <title>Domino's Retail Sales Coach | AI-Powered Training</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="logo">
+        Domino's <span class="highlight">Sales Coach</span>
+      </h1>
+      <p class="tagline">Master Your Sales Skills with AI</p>
+      <p class="subtitle">
+        Practice real-world sales scenarios with our intelligent training platform.
+        Build confidence, improve performance, and deliver exceptional customer experiences.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Scenario Selection Section -->
+    <section id="scenarioSection" class="scenario-section">
+      <h2 class="section-title">Choose Your Training Scenario</h2>
+      <p class="section-subtitle">
+        Select a scenario below to start your AI-powered practice session. 
+        Each scenario is designed to help you master specific sales skills.
+      </p>
+      
+      <div class="scenarios-grid">
+        
+        <!-- Scenario 1: Upselling -->
+        <div class="scenario-card" data-scenario="upselling" tabindex="0" role="button" aria-label="Start Upselling Training">
+          <span class="scenario-icon">💰</span>
+          <h3 class="scenario-title">Upselling Mastery</h3>
+          <p class="scenario-description">
+            Learn to recommend sides, drinks, and desserts that enhance the customer's order 
+            while increasing ticket value.
+          </p>
+          <span class="scenario-tag">Increase Sales</span>
+        </div>
+
+        <!-- Scenario 2: Handling Objections -->
+        <div class="scenario-card" data-scenario="objections" tabindex="0" role="button" aria-label="Start Objection Handling Training">
+          <span class="scenario-icon">🛡️</span>
+          <h3 class="scenario-title">Handling Objections</h3>
+          <p class="scenario-description">
+            Master techniques to address price concerns, delivery time questions, 
+            and other customer hesitations with confidence.
+          </p>
+          <span class="scenario-tag">Build Trust</span>
+        </div>
+
+        <!-- Scenario 3: Order Taking -->
+        <div class="scenario-card" data-scenario="order-taking" tabindex="0" role="button" aria-label="Start Order Taking Training">
+          <span class="scenario-icon">📝</span>
+          <h3 class="scenario-title">Efficient Order Taking</h3>
+          <p class="scenario-description">
+            Practice taking orders quickly and accurately while maintaining friendly, 
+            professional customer interactions.
+          </p>
+          <span class="scenario-tag">Speed & Accuracy</span>
+        </div>
+
+        <!-- Scenario 4: Complaint Resolution -->
+        <div class="scenario-card" data-scenario="complaints" tabindex="0" role="button" aria-label="Start Complaint Resolution Training">
+          <span class="scenario-icon">🤝</span>
+          <h3 class="scenario-title">Complaint Resolution</h3>
+          <p class="scenario-description">
+            Develop skills to handle customer complaints with empathy and professionalism, 
+            turning negative experiences into positive outcomes.
+          </p>
+          <span class="scenario-tag">Recovery Skills</span>
+        </div>
+
+        <!-- Scenario 5: Promotions -->
+        <div class="scenario-card" data-scenario="promotions" tabindex="0" role="button" aria-label="Start Promotions Training">
+          <span class="scenario-icon">🎉</span>
+          <h3 class="scenario-title">Promoting Deals</h3>
+          <p class="scenario-description">
+            Learn to effectively communicate current promotions and special offers 
+            to maximize value for customers and drive sales.
+          </p>
+          <span class="scenario-tag">Marketing Skills</span>
+        </div>
+
+        <!-- Scenario 6: Product Knowledge -->
+        <div class="scenario-card" data-scenario="product-knowledge" tabindex="0" role="button" aria-label="Start Product Knowledge Training">
+          <span class="scenario-icon">🍕</span>
+          <h3 class="scenario-title">Product Knowledge</h3>
+          <p class="scenario-description">
+            Master our menu offerings, ingredients, and customization options 
+            to confidently answer customer questions and make recommendations.
+          </p>
+          <span class="scenario-tag">Expert Level</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Training Section (Hidden by default) -->
+    <section id="trainingSection" class="training-section">
+      <div class="training-header">
+        <h2 class="training-title">
+          <span id="currentScenarioIcon">🎯</span>
+          <span id="currentScenarioTitle">Training Session</span>
+        </h2>
+        <button id="backBtn" class="back-btn">
+          <span>←</span>
+          <span>Back to Scenarios</span>
+        </button>
+      </div>
+
+      <div class="iframe-container">
+        <iframe
+          id="trainingIframe"
+          class="training-iframe"
+          src=""
+          width="100%"
+          height="700"
+          frameborder="0"
+          allow="microphone; camera; display-capture"
+          title="AI Training Session"
+        ></iframe>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
