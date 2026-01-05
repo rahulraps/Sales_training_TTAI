@@ -8,32 +8,32 @@ const SCENARIO_CONFIG = {
   'upselling': {
     title: 'Upselling Mastery',
     icon: '💰',
-    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?skipPrecheck=true'
+    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?scenarioNameColor=%234f1212&buttonOutline=false&bg=%23e1a8a8&skipPrecheck=true'
   },
   'objections': {
     title: 'Handling Objections',
     icon: '🛡️',
-    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?skipPrecheck=true'
+    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?scenarioNameColor=%234f1212&buttonOutline=false&bg=%23e1a8a8&skipPrecheck=true'
   },
   'order-taking': {
     title: 'Efficient Order Taking',
     icon: '📝',
-    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?skipPrecheck=true'
+    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?scenarioNameColor=%234f1212&buttonOutline=false&bg=%23e1a8a8&skipPrecheck=true'
   },
   'complaints': {
     title: 'Complaint Resolution',
     icon: '🤝',
-    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?skipPrecheck=true'
+    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?scenarioNameColor=%234f1212&buttonOutline=false&bg=%23e1a8a8&skipPrecheck=true'
   },
   'promotions': {
     title: 'Promoting Deals',
     icon: '🎉',
-    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?skipPrecheck=true'
+    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?scenarioNameColor=%234f1212&buttonOutline=false&bg=%23e1a8a8&skipPrecheck=true'
   },
   'product-knowledge': {
     title: 'Product Knowledge',
     icon: '🍕',
-    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?skipPrecheck=true'
+    iframeUrl: 'https://app.toughtongueai.com/embed/681395fcf922486a45f11ed6?scenarioNameColor=%234f1212&buttonOutline=false&bg=%23e1a8a8&skipPrecheck=true'
   }
 };
 
@@ -101,7 +101,7 @@ function setupKeyboardNavigation() {
 // Load selected scenario
 function loadScenario(scenarioKey) {
   const scenario = SCENARIO_CONFIG[scenarioKey];
-  
+
   if (!scenario) {
     console.error(`Scenario ${scenarioKey} not found`);
     return;
@@ -110,21 +110,21 @@ function loadScenario(scenarioKey) {
   // Update UI
   currentScenarioTitle.textContent = scenario.title;
   currentScenarioIcon.textContent = scenario.icon;
-  
+
   // Show loading state
   trainingIframe.classList.add('loading');
-  
+
   // Load iframe
   trainingIframe.src = scenario.iframeUrl;
-  
+
   // Remove loading state after iframe loads
   trainingIframe.addEventListener('load', () => {
     trainingIframe.classList.remove('loading');
   }, { once: true });
-  
+
   // Switch sections with smooth transition
   switchToTraining();
-  
+
   // Track scenario selection (you can integrate analytics here)
   trackScenarioSelection(scenarioKey);
 }
@@ -134,17 +134,17 @@ function switchToTraining() {
   // Fade out scenario section
   scenarioSection.style.opacity = '0';
   scenarioSection.style.transition = 'opacity 0.3s ease';
-  
+
   setTimeout(() => {
     scenarioSection.classList.add('hidden');
     trainingSection.classList.add('active');
-    
+
     // Smooth scroll to top
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-    
+
     // Reset opacity for next time
     scenarioSection.style.opacity = '1';
   }, 300);
@@ -155,20 +155,20 @@ function returnToScenarios() {
   // Fade out training section
   trainingSection.style.opacity = '0';
   trainingSection.style.transition = 'opacity 0.3s ease';
-  
+
   setTimeout(() => {
     trainingSection.classList.remove('active');
     scenarioSection.classList.remove('hidden');
-    
+
     // Clear iframe to stop any ongoing session
     trainingIframe.src = '';
-    
+
     // Smooth scroll to scenarios
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-    
+
     // Reset opacity for next time
     trainingSection.style.opacity = '1';
   }, 300);
@@ -184,10 +184,10 @@ function trackScenarioSelection(scenarioKey) {
       'value': 1
     });
   }
-  
+
   // Example: Console logging for development
   console.log(`Scenario selected: ${scenarioKey}`);
-  
+
   // You can add more tracking services here
   // - Facebook Pixel
   // - Mixpanel
@@ -249,7 +249,7 @@ if ('PerformanceObserver' in window) {
       }
     }
   });
-  
+
   try {
     perfObserver.observe({ entryTypes: ['navigation'] });
   } catch (e) {
