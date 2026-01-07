@@ -3,16 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Domino's Retail Sales Coach - AI-powered sales training for team members. Practice upselling, handling objections, and customer service scenarios.">
-  <meta name="keywords" content="Dominos, sales training, retail coaching, AI training, customer service, upselling">
-  <meta name="author" content="Domino's Pizza">
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Domino's Retail Sales Coach">
-  <meta property="og:description" content="Master your sales skills with AI-powered scenario training">
-  <meta property="og:type" content="website">
-  
-  <title>Domino's Retail Sales Coach | AI-Powered Training</title>
+  <meta name="description" content="Domino's Sales Coach - Master your sales skills with AI-powered training">
+  <title>Domino's Pizza | Sales Coach Training</title>
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
@@ -22,132 +14,177 @@
 </head>
 <body>
   
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="logo">
-        Domino's <span class="highlight">Sales Coach</span>
-      </h1>
-      <p class="tagline">Master Your Sales Skills with AI</p>
-      <p class="subtitle">
-        Practice real-world sales scenarios with our intelligent training platform.
-        Build confidence, improve performance, and deliver exceptional customer experiences.
-      </p>
+  <!-- Fixed Header -->
+  <header class="main-header">
+    <div class="delivery-bar">
+      <div class="delivery-container">
+        <div class="location-selector">
+          <span>📍</span>
+          <span class="location-text">Select Location for Delivery</span>
+          <button class="location-btn">CHANGE</button>
+        </div>
+        <div class="user-actions">
+          <!-- Placeholder for user account/cart -->
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- Main Container -->
-  <div class="container">
     
-    <!-- Scenario Selection Section -->
-    <section id="scenarioSection" class="scenario-section">
-      <h2 class="section-title">Choose Your Training Scenario</h2>
-      <p class="section-subtitle">
-        Select a scenario below to start your AI-powered practice session. 
-        Each scenario is designed to help you master specific sales skills.
-      </p>
-      
-      <div class="scenarios-grid">
+    <div class="service-options">
+      <div class="service-tab active">
+        Delivery
+        <span class="service-subtext">30 MINS</span>
+      </div>
+      <div class="service-tab">
+        Takeaway
+        <span class="service-subtext">PICK UP</span>
+      </div>
+      <div class="service-tab">
+        Dine-in
+        <span class="service-subtext">EAT IN</span>
+      </div>
+    </div>
+    
+    <!-- Category Navigation -->
+    <nav class="category-nav">
+      <div class="category-list">
+        <div class="category-item active">
+          <div class="category-img-wrapper">
+            <!-- Using a crop of the category icons image for demo purposes -->
+            <img src="images/category-icons.png" alt="Best Sellers" class="category-img" style="object-fit: cover; object-position: 0 0;">
+          </div>
+          <span class="category-label">Best Sellers</span>
+        </div>
+        <div class="category-item">
+          <div class="category-img-wrapper">
+            <img src="images/category-icons.png" alt="Veg Pizza" class="category-img" style="object-fit: cover; object-position: 20% 0;">
+          </div>
+          <span class="category-label">Veg Pizza</span>
+        </div>
+        <div class="category-item">
+          <div class="category-img-wrapper">
+            <img src="images/category-icons.png" alt="Non-Veg Pizza" class="category-img" style="object-fit: cover; object-position: 40% 0;">
+          </div>
+          <span class="category-label">Non-Veg</span>
+        </div>
+        <div class="category-item">
+          <div class="category-img-wrapper">
+            <img src="images/category-icons.png" alt="Sides" class="category-img" style="object-fit: cover; object-position: 60% 0;">
+          </div>
+          <span class="category-label">Sides</span>
+        </div>
+        <div class="category-item">
+          <div class="category-img-wrapper">
+            <img src="images/category-icons.png" alt="Drinks" class="category-img" style="object-fit: cover; object-position: 80% 0;">
+          </div>
+          <span class="category-label">Drinks</span>
+        </div>
+        <div class="category-item">
+          <div class="category-img-wrapper">
+            <img src="images/category-icons.png" alt="Desserts" class="category-img" style="object-fit: cover; object-position: 100% 0;">
+          </div>
+          <span class="category-label">Desserts</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- What's New Banner -->
+    <section class="whats-new-section">
+      <div class="container">
+        <h2 class="section-heading">What's New</h2>
+        <div class="promo-banner">
+          <img src="images/whats-new-banner.png" alt="New Pizza Offers" class="promo-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Hero Section -->
+    <section class="training-hero">
+      <div class="container">
+        <h1 class="training-title">Domino's Sales Coach</h1>
+        <p class="training-subtitle">Master your sales skills with our AI-powered training platform. Click the pizza below to start your session.</p>
         
-        <!-- Scenario 1: Upselling -->
-        <div class="scenario-card" data-scenario="upselling" tabindex="0" role="button" aria-label="Start Upselling Training">
-          <span class="scenario-icon">💰</span>
-          <h3 class="scenario-title">Upselling Mastery</h3>
-          <p class="scenario-description">
-            Learn to recommend sides, drinks, and desserts that enhance the customer's order 
-            while increasing ticket value.
-          </p>
-          <span class="scenario-tag">Increase Sales</span>
+        <div class="pizza-training-container" id="startTrainingBtn">
+          <img src="images/training-pizza.png" alt="Start Training" class="training-pizza-img">
+          <div class="click-overlay">
+            <span class="click-text">START TRAINING</span>
+            <span class="click-icon">▶</span>
+          </div>
         </div>
-
-        <!-- Scenario 2: Handling Objections -->
-        <div class="scenario-card" data-scenario="objections" tabindex="0" role="button" aria-label="Start Objection Handling Training">
-          <span class="scenario-icon">🛡️</span>
-          <h3 class="scenario-title">Handling Objections</h3>
-          <p class="scenario-description">
-            Master techniques to address price concerns, delivery time questions, 
-            and other customer hesitations with confidence.
-          </p>
-          <span class="scenario-tag">Build Trust</span>
-        </div>
-
-        <!-- Scenario 3: Order Taking -->
-        <div class="scenario-card" data-scenario="order-taking" tabindex="0" role="button" aria-label="Start Order Taking Training">
-          <span class="scenario-icon">📝</span>
-          <h3 class="scenario-title">Efficient Order Taking</h3>
-          <p class="scenario-description">
-            Practice taking orders quickly and accurately while maintaining friendly, 
-            professional customer interactions.
-          </p>
-          <span class="scenario-tag">Speed & Accuracy</span>
-        </div>
-
-        <!-- Scenario 4: Complaint Resolution -->
-        <div class="scenario-card" data-scenario="complaints" tabindex="0" role="button" aria-label="Start Complaint Resolution Training">
-          <span class="scenario-icon">🤝</span>
-          <h3 class="scenario-title">Complaint Resolution</h3>
-          <p class="scenario-description">
-            Develop skills to handle customer complaints with empathy and professionalism, 
-            turning negative experiences into positive outcomes.
-          </p>
-          <span class="scenario-tag">Recovery Skills</span>
-        </div>
-
-        <!-- Scenario 5: Promotions -->
-        <div class="scenario-card" data-scenario="promotions" tabindex="0" role="button" aria-label="Start Promotions Training">
-          <span class="scenario-icon">🎉</span>
-          <h3 class="scenario-title">Promoting Deals</h3>
-          <p class="scenario-description">
-            Learn to effectively communicate current promotions and special offers 
-            to maximize value for customers and drive sales.
-          </p>
-          <span class="scenario-tag">Marketing Skills</span>
-        </div>
-
-        <!-- Scenario 6: Product Knowledge -->
-        <div class="scenario-card" data-scenario="product-knowledge" tabindex="0" role="button" aria-label="Start Product Knowledge Training">
-          <span class="scenario-icon">🍕</span>
-          <h3 class="scenario-title">Product Knowledge</h3>
-          <p class="scenario-description">
-            Master our menu offerings, ingredients, and customization options 
-            to confidently answer customer questions and make recommendations.
-          </p>
-          <span class="scenario-tag">Expert Level</span>
-        </div>
-
       </div>
     </section>
 
-    <!-- Training Section (Hidden by default) -->
-    <section id="trainingSection" class="training-section">
-      <div class="training-header">
-        <h2 class="training-title">
-          <span id="currentScenarioIcon">🎯</span>
-          <span id="currentScenarioTitle">Training Session</span>
-        </h2>
-        <button id="backBtn" class="back-btn">
-          <span>←</span>
-          <span>Back to Scenarios</span>
-        </button>
-      </div>
-
-      <div class="iframe-container">
-        <iframe
-          id="trainingIframe"
-          class="training-iframe"
-          src=""
-          width="100%"
-          height="700"
-          frameborder="0"
-          allow="microphone; camera; display-capture"
-          title="AI Training Session"
-        ></iframe>
+    <!-- Bestsellers Section -->
+    <section class="bestsellers-section">
+      <div class="container">
+        <div class="crown-icon">👑</div>
+        <h2 class="bestsellers-title">Top 10 Bestsellers</h2>
+        
+        <div class="bestsellers-grid">
+          <!-- Bestseller 1 -->
+          <div class="bestseller-card">
+            <div class="bestseller-img" style="background-image: url('images/category-icons.png'); background-size: cover; background-position: center;"></div>
+            <div class="bestseller-info">
+              <h3 class="bestseller-name">Farmhouse</h3>
+              <div class="bestseller-price">$12.99</div>
+              <button class="btn-add">ADD TO CART</button>
+            </div>
+          </div>
+          
+          <!-- Bestseller 2 -->
+          <div class="bestseller-card">
+            <div class="bestseller-img" style="background-image: url('images/category-icons.png'); background-size: cover; background-position: left;"></div>
+            <div class="bestseller-info">
+              <h3 class="bestseller-name">Peppy Paneer</h3>
+              <div class="bestseller-price">$11.99</div>
+              <button class="btn-add">ADD TO CART</button>
+            </div>
+          </div>
+          
+          <!-- Bestseller 3 -->
+          <div class="bestseller-card">
+            <div class="bestseller-img" style="background-image: url('images/category-icons.png'); background-size: cover; background-position: right;"></div>
+            <div class="bestseller-info">
+              <h3 class="bestseller-name">Veg Extravaganza</h3>
+              <div class="bestseller-price">$14.99</div>
+              <button class="btn-add">ADD TO CART</button>
+            </div>
+          </div>
+          
+          <!-- Bestseller 4 -->
+          <div class="bestseller-card">
+            <div class="bestseller-img" style="background-image: url('images/category-icons.png'); background-size: cover; background-position: top;"></div>
+            <div class="bestseller-info">
+              <h3 class="bestseller-name">Chicken Dominator</h3>
+              <div class="bestseller-price">$15.99</div>
+              <button class="btn-add">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+  </main>
 
+  <!-- Training Overlay (Iframe) -->
+  <div class="training-overlay" id="trainingOverlay">
+    <div class="training-nav">
+      <div class="logo">Domino's Sales Coach</div>
+      <button class="close-training" id="closeTrainingBtn">
+        <span>✕</span> EXIT TRAINING
+      </button>
+    </div>
+    <iframe 
+      id="trainingIframe" 
+      class="training-frame" 
+      src="" 
+      allow="microphone; camera; display-capture"
+      title="Training Session"
+    ></iframe>
   </div>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
