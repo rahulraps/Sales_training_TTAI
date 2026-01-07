@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Domino's Sales Coach - Master your sales skills with AI-powered training">
   <title>Domino's Pizza | Sales Coach Training</title>
-  
+
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
-  
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  
+
   <!-- Fixed Header -->
   <header class="main-header">
     <div class="delivery-bar">
@@ -28,7 +31,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="service-options">
       <div class="service-tab active">
         Delivery
@@ -43,44 +46,50 @@
         <span class="service-subtext">EAT IN</span>
       </div>
     </div>
-    
+
     <!-- Category Navigation -->
     <nav class="category-nav">
       <div class="category-list">
         <div class="category-item active">
           <div class="category-img-wrapper">
             <!-- Using a crop of the category icons image for demo purposes -->
-            <img src="images/category-icons.png" alt="Best Sellers" class="category-img" style="object-fit: cover; object-position: 0 0;">
+            <img src="images/category-icons.png" alt="Best Sellers" class="category-img"
+              style="object-fit: cover; object-position: 0 0;">
           </div>
           <span class="category-label">Best Sellers</span>
         </div>
         <div class="category-item">
           <div class="category-img-wrapper">
-            <img src="images/category-icons.png" alt="Veg Pizza" class="category-img" style="object-fit: cover; object-position: 20% 0;">
+            <img src="images/category-icons.png" alt="Veg Pizza" class="category-img"
+              style="object-fit: cover; object-position: 20% 0;">
           </div>
           <span class="category-label">Veg Pizza</span>
         </div>
         <div class="category-item">
           <div class="category-img-wrapper">
-            <img src="images/category-icons.png" alt="Non-Veg Pizza" class="category-img" style="object-fit: cover; object-position: 40% 0;">
+            <img src="images/category-icons.png" alt="Non-Veg Pizza" class="category-img"
+              style="object-fit: cover; object-position: 40% 0;">
           </div>
           <span class="category-label">Non-Veg</span>
         </div>
         <div class="category-item">
           <div class="category-img-wrapper">
-            <img src="images/category-icons.png" alt="Sides" class="category-img" style="object-fit: cover; object-position: 60% 0;">
+            <img src="images/category-icons.png" alt="Sides" class="category-img"
+              style="object-fit: cover; object-position: 60% 0;">
           </div>
           <span class="category-label">Sides</span>
         </div>
         <div class="category-item">
           <div class="category-img-wrapper">
-            <img src="images/category-icons.png" alt="Drinks" class="category-img" style="object-fit: cover; object-position: 80% 0;">
+            <img src="images/category-icons.png" alt="Drinks" class="category-img"
+              style="object-fit: cover; object-position: 80% 0;">
           </div>
           <span class="category-label">Drinks</span>
         </div>
         <div class="category-item">
           <div class="category-img-wrapper">
-            <img src="images/category-icons.png" alt="Desserts" class="category-img" style="object-fit: cover; object-position: 100% 0;">
+            <img src="images/category-icons.png" alt="Desserts" class="category-img"
+              style="object-fit: cover; object-position: 100% 0;">
           </div>
           <span class="category-label">Desserts</span>
         </div>
@@ -90,101 +99,113 @@
 
   <!-- Main Content -->
   <main>
-    
-    <!-- What's New Banner -->
-    <section class="whats-new-section">
-      <div class="container">
-        <h2 class="section-heading">What's New</h2>
-        <div class="promo-banner">
-          <img src="images/whats-new-banner.png" alt="New Pizza Offers" class="promo-img">
-        </div>
-      </div>
-    </section>
 
-    <!-- Training Hero Section -->
-    <section class="training-hero">
-      <div class="container">
-        <h1 class="training-title">Domino's Sales Coach</h1>
-        <p class="training-subtitle">Master your sales skills with our AI-powered training platform. Click the pizza below to start your session.</p>
-        
-        <div class="pizza-training-container" id="startTrainingBtn">
-          <img src="images/training-pizza.png" alt="Start Training" class="training-pizza-img">
-          <div class="click-overlay">
-            <span class="click-text">START TRAINING</span>
-            <span class="click-icon">▶</span>
+    <!-- Home Section (Visible by default) -->
+    <section id="homeSection">
+      <!-- What's New Banner -->
+      <section class="whats-new-section">
+        <div class="container">
+          <h2 class="section-heading">What's New</h2>
+          <div class="promo-banner">
+            <img src="images/whats-new-banner.png" alt="New Pizza Offers" class="promo-img">
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Training Hero Section -->
+      <section class="training-hero">
+        <div class="container">
+          <h1 class="training-title">Domino's Sales Coach</h1>
+          <p class="training-subtitle">Master your sales skills with our AI-powered training platform. Click the pizza
+            below to start your session.</p>
+
+          <div class="pizza-training-container" id="startTrainingBtn">
+            <img src="images/training-pizza.png" alt="Start Training" class="training-pizza-img">
+            <div class="click-overlay">
+              <span class="click-text">START TRAINING</span>
+              <span class="click-icon">▶</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bestsellers Section -->
+      <section class="bestsellers-section">
+        <div class="container">
+          <div class="crown-icon">👑</div>
+          <h2 class="bestsellers-title">Top 10 Bestsellers</h2>
+
+          <div class="bestsellers-grid">
+            <!-- Bestseller 1 -->
+            <div class="bestseller-card">
+              <div class="bestseller-img"
+                style="background-image: url('images/category-icons.png'); background-size: cover; background-position: center;">
+              </div>
+              <div class="bestseller-info">
+                <h3 class="bestseller-name">Farmhouse</h3>
+                <div class="bestseller-price">$12.99</div>
+                <button class="btn-add">ADD TO CART</button>
+              </div>
+            </div>
+
+            <!-- Bestseller 2 -->
+            <div class="bestseller-card">
+              <div class="bestseller-img"
+                style="background-image: url('images/category-icons.png'); background-size: cover; background-position: left;">
+              </div>
+              <div class="bestseller-info">
+                <h3 class="bestseller-name">Peppy Paneer</h3>
+                <div class="bestseller-price">$11.99</div>
+                <button class="btn-add">ADD TO CART</button>
+              </div>
+            </div>
+
+            <!-- Bestseller 3 -->
+            <div class="bestseller-card">
+              <div class="bestseller-img"
+                style="background-image: url('images/category-icons.png'); background-size: cover; background-position: right;">
+              </div>
+              <div class="bestseller-info">
+                <h3 class="bestseller-name">Veg Extravaganza</h3>
+                <div class="bestseller-price">$14.99</div>
+                <button class="btn-add">ADD TO CART</button>
+              </div>
+            </div>
+
+            <!-- Bestseller 4 -->
+            <div class="bestseller-card">
+              <div class="bestseller-img"
+                style="background-image: url('images/category-icons.png'); background-size: cover; background-position: top;">
+              </div>
+              <div class="bestseller-info">
+                <h3 class="bestseller-name">Chicken Dominator</h3>
+                <div class="bestseller-price">$15.99</div>
+                <button class="btn-add">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
 
-    <!-- Bestsellers Section -->
-    <section class="bestsellers-section">
+    <!-- Training Section (Hidden by default) -->
+    <section id="trainingSection" class="training-section" style="display: none;">
       <div class="container">
-        <div class="crown-icon">👑</div>
-        <h2 class="bestsellers-title">Top 10 Bestsellers</h2>
-        
-        <div class="bestsellers-grid">
-          <!-- Bestseller 1 -->
-          <div class="bestseller-card">
-            <div class="bestseller-img" style="background-image: url('images/category-icons.png'); background-size: cover; background-position: center;"></div>
-            <div class="bestseller-info">
-              <h3 class="bestseller-name">Farmhouse</h3>
-              <div class="bestseller-price">$12.99</div>
-              <button class="btn-add">ADD TO CART</button>
-            </div>
-          </div>
-          
-          <!-- Bestseller 2 -->
-          <div class="bestseller-card">
-            <div class="bestseller-img" style="background-image: url('images/category-icons.png'); background-size: cover; background-position: left;"></div>
-            <div class="bestseller-info">
-              <h3 class="bestseller-name">Peppy Paneer</h3>
-              <div class="bestseller-price">$11.99</div>
-              <button class="btn-add">ADD TO CART</button>
-            </div>
-          </div>
-          
-          <!-- Bestseller 3 -->
-          <div class="bestseller-card">
-            <div class="bestseller-img" style="background-image: url('images/category-icons.png'); background-size: cover; background-position: right;"></div>
-            <div class="bestseller-info">
-              <h3 class="bestseller-name">Veg Extravaganza</h3>
-              <div class="bestseller-price">$14.99</div>
-              <button class="btn-add">ADD TO CART</button>
-            </div>
-          </div>
-          
-          <!-- Bestseller 4 -->
-          <div class="bestseller-card">
-            <div class="bestseller-img" style="background-image: url('images/category-icons.png'); background-size: cover; background-position: top;"></div>
-            <div class="bestseller-info">
-              <h3 class="bestseller-name">Chicken Dominator</h3>
-              <div class="bestseller-price">$15.99</div>
-              <button class="btn-add">ADD TO CART</button>
-            </div>
-          </div>
+        <div class="training-header-bar">
+          <button class="back-btn" id="backToHomeBtn">
+            <span>←</span> BACK TO MENU
+          </button>
+          <h2 class="training-session-title">AI Training Session</h2>
+        </div>
+        <div class="iframe-wrapper">
+          <iframe id="trainingIframe" class="training-frame" src="" allow="microphone; camera; display-capture"
+            title="Training Session"></iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Training Overlay (Iframe) -->
-  <div class="training-overlay" id="trainingOverlay">
-    <div class="training-nav">
-      <div class="logo">Domino's Sales Coach</div>
-      <button class="close-training" id="closeTrainingBtn">
-        <span>✕</span> EXIT TRAINING
-      </button>
-    </div>
-    <iframe 
-      id="trainingIframe" 
-      class="training-frame" 
-      src="" 
-      allow="microphone; camera; display-capture"
-      title="Training Session"
-    ></iframe>
-  </div>
-
   <script src="script.js"></script>
 </body>
+
 </html>

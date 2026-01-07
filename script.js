@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Elements
   const startTrainingBtn = document.getElementById('startTrainingBtn');
-  const trainingOverlay = document.getElementById('trainingOverlay');
-  const closeTrainingBtn = document.getElementById('closeTrainingBtn');
+  const homeSection = document.getElementById('homeSection');
+  const trainingSection = document.getElementById('trainingSection');
+  const backToHomeBtn = document.getElementById('backToHomeBtn');
   const trainingIframe = document.getElementById('trainingIframe');
   const serviceTabs = document.querySelectorAll('.service-tab');
   const categoryItems = document.querySelectorAll('.category-item');
@@ -12,28 +13,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Start Training Handler
   startTrainingBtn.addEventListener('click', () => {
-    // Show overlay
-    trainingOverlay.classList.add('active');
-    
+    // Hide home section
+    homeSection.style.display = 'none';
+
+    // Show training section
+    trainingSection.style.display = 'block';
+
+    // Scroll to top
+    window.scrollTo(0, 0);
+
     // Load iframe if not already loaded
     if (!trainingIframe.src || trainingIframe.src === "") {
       trainingIframe.src = TRAINING_URL;
     }
-    
-    // Prevent body scrolling
-    document.body.style.overflow = 'hidden';
   });
 
-  // Close Training Handler
-  closeTrainingBtn.addEventListener('click', () => {
-    // Hide overlay
-    trainingOverlay.classList.remove('active');
-    
-    // Clear iframe to stop audio/video
-    trainingIframe.src = "";
-    
-    // Restore body scrolling
-    document.body.style.overflow = '';
+  // Back to Home Handler
+  backToHomeBtn.addEventListener('click', () => {
+    // Hide training section
+    trainingSection.style.display = 'none';
+
+    // Show home section
+    homeSection.style.display = 'block';
+
+    // Clear iframe to stop audio/video (optional, or keep it loaded)
+    // trainingIframe.src = ""; 
   });
 
   // Service Tab Switching
@@ -41,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tab.addEventListener('click', () => {
       // Remove active class from all tabs
       serviceTabs.forEach(t => t.classList.remove('active'));
-      
+
       // Add active class to clicked tab
       tab.classList.add('active');
     });
@@ -52,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', () => {
       // Remove active class from all items
       categoryItems.forEach(i => i.classList.remove('active'));
-      
+
       // Add active class to clicked item
       item.classList.add('active');
     });
