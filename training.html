@@ -17,104 +17,28 @@
 
 <body class="training-page-body">
 
-    <!-- Fixed Header -->
-    <header class="main-header">
-        <div class="delivery-bar">
-            <div class="delivery-container">
-                <div class="location-selector">
-                    <span>📍</span>
-                    <span class="location-text">Select Location for Delivery</span>
-                    <button class="location-btn">CHANGE</button>
-                </div>
-                <div class="user-actions">
-                    <!-- Placeholder for user account/cart -->
-                </div>
+    <!-- Minimal Header for Training Page -->
+    <header class="training-header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">
+                <span class="back-arrow">←</span> Back to Menu
+            </a>
+            <div class="brand-title">
+                <span class="dominos-text">Domino's</span> <span class="coach-text">Sales Coach</span>
+            </div>
+            <div class="session-status">
+                <span class="status-dot"></span> Live Session
             </div>
         </div>
-
-        <div class="service-options">
-            <div class="service-tab active">
-                Delivery
-                <span class="service-subtext">30 MINS</span>
-            </div>
-            <div class="service-tab">
-                Takeaway
-                <span class="service-subtext">PICK UP</span>
-            </div>
-            <div class="service-tab">
-                Dine-in
-                <span class="service-subtext">EAT IN</span>
-            </div>
-        </div>
-
-        <!-- Category Navigation (Static for consistency) -->
-        <nav class="category-nav">
-            <div class="category-list">
-                <div class="category-item active">
-                    <div class="category-img-wrapper">
-                        <img src="images/category-icons.png" alt="Best Sellers" class="category-img"
-                            style="object-fit: cover; object-position: 0 0;">
-                    </div>
-                    <span class="category-label">Best Sellers</span>
-                </div>
-                <div class="category-item">
-                    <div class="category-img-wrapper">
-                        <img src="images/category-icons.png" alt="Veg Pizza" class="category-img"
-                            style="object-fit: cover; object-position: 20% 0;">
-                    </div>
-                    <span class="category-label">Veg Pizza</span>
-                </div>
-                <div class="category-item">
-                    <div class="category-img-wrapper">
-                        <img src="images/category-icons.png" alt="Non-Veg Pizza" class="category-img"
-                            style="object-fit: cover; object-position: 40% 0;">
-                    </div>
-                    <span class="category-label">Non-Veg</span>
-                </div>
-                <div class="category-item">
-                    <div class="category-img-wrapper">
-                        <img src="images/category-icons.png" alt="Sides" class="category-img"
-                            style="object-fit: cover; object-position: 60% 0;">
-                    </div>
-                    <span class="category-label">Sides</span>
-                </div>
-                <div class="category-item">
-                    <div class="category-img-wrapper">
-                        <img src="images/category-icons.png" alt="Drinks" class="category-img"
-                            style="object-fit: cover; object-position: 80% 0;">
-                    </div>
-                    <span class="category-label">Drinks</span>
-                </div>
-                <div class="category-item">
-                    <div class="category-img-wrapper">
-                        <img src="images/category-icons.png" alt="Desserts" class="category-img"
-                            style="object-fit: cover; object-position: 100% 0;">
-                    </div>
-                    <span class="category-label">Desserts</span>
-                </div>
-            </div>
-        </nav>
     </header>
 
     <!-- Main Content -->
-    <main class="training-main">
-        <div class="training-container">
-            <div class="training-header-bar">
-                <a href="index.html" class="back-btn">
-                    <span class="back-icon">←</span> BACK TO MENU
-                </a>
-                <div class="training-info">
-                    <h2 class="training-session-title">Sales Coach AI</h2>
-                    <span class="live-badge">● LIVE SESSION</span>
-                </div>
-            </div>
-
-            <div class="iframe-wrapper">
-                <iframe id="trainingIframe" class="training-frame"
-                    src="https://app.toughtongueai.com/embed/68139be5f922486a45f11f31?bg=blue-900&skipPrecheck=true"
-                    width="100%" height="700px" frameborder="0" allow="microphone; camera; display-capture"
-                    title="Training Session"></iframe>
-            </div>
+    <main class="training-main-focused">
+        <div class="iframe-full-container">
+            <iframe id="trainingIframe" class="training-frame-full"
+                src="https://app.toughtongueai.com/embed/68139be5f922486a45f11f31?bg=blue-900&skipPrecheck=true"
+                width="100%" height="100%" frameborder="0" allow="microphone; camera; display-capture"
+                title="Training Session"></iframe>
         </div>
     </main>
 
