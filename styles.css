@@ -223,8 +223,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Since we have a sprite sheet/single image for categories, we'd normally use background-position */
-  /* For this implementation, we'll use the generated image and scale/position it */
 }
 
 .category-label {
@@ -463,25 +461,28 @@ body {
 }
 
 /* ============================================
-   TRAINING SECTION (IN-PAGE)
+   TRAINING SECTION (SEPARATE PAGE)
    ============================================ */
-.training-section {
-  padding: var(--spacing-lg) 0;
-  background: var(--gray-50);
-  min-height: 80vh;
-  animation: fadeIn var(--transition-normal);
+.training-page-body {
+  background-color: var(--gray-100);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
+.training-main {
+  padding: var(--spacing-lg) 0;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.training-container {
+  max-width: 1400px;
+  /* Wider container for training */
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .training-header-bar {
@@ -490,16 +491,17 @@ body {
   justify-content: space-between;
   margin-bottom: var(--spacing-md);
   background: var(--dominos-white);
-  padding: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  border-left: 5px solid var(--dominos-red);
 }
 
 .back-btn {
-  background: var(--dominos-blue);
-  color: var(--dominos-white);
-  border: none;
-  padding: 8px 16px;
+  background: transparent;
+  color: var(--dominos-blue);
+  border: 2px solid var(--dominos-blue);
+  padding: 8px 20px;
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-weight: 700;
@@ -507,11 +509,27 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: background var(--transition-fast);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 .back-btn:hover {
-  background: var(--blue-dark);
+  background: var(--dominos-blue);
+  color: var(--dominos-white);
+  transform: translateX(-4px);
+}
+
+.back-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.training-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
 }
 
 .training-session-title {
@@ -519,22 +537,67 @@ body {
   font-size: 1.5rem;
   color: var(--gray-900);
   margin: 0;
+  text-transform: uppercase;
+}
+
+.live-badge {
+  background-color: #ffebee;
+  color: var(--dominos-red);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(227, 24, 55, 0.2);
+}
+
+.live-badge::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--dominos-red);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .iframe-wrapper {
   background: var(--dominos-white);
-  padding: var(--spacing-sm);
+  padding: 0;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  height: 700px;
+  box-shadow: var(--shadow-lg);
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--gray-200);
 }
 
 .training-frame {
   width: 100%;
   height: 100%;
+  min-height: 750px;
   border: none;
-  border-radius: var(--radius-sm);
-  background: var(--gray-100);
+  display: block;
 }
 
 /* ============================================
@@ -576,10 +639,16 @@ body {
     flex-direction: column;
     gap: var(--spacing-sm);
     align-items: flex-start;
+    padding: var(--spacing-md);
   }
 
-  .iframe-wrapper {
-    height: 500px;
+  .training-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .training-frame {
+    min-height: 600px;
   }
 }
 
